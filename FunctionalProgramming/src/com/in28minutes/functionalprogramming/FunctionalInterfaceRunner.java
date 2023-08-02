@@ -14,7 +14,7 @@ class OddNumberPredicate implements Predicate<Integer>{
     
 }
 
-class ForEachConsumer implements Consumer<Integer>{
+class SystemOutConsumer implements Consumer<Integer>{
 
     @Override
     public void accept(Integer t) {
@@ -31,7 +31,7 @@ public class FunctionalInterfaceRunner {
         // TODO Auto-generated method stub
 //        List.of(23,43,34,45,36,48).stream().filter(num -> num%2 == 1).forEach(System.out::println);
 //        List.of(23,43,34,45,36,48).stream().filter(new OddNumberPredicate()).forEach(System.out::println);
-        List.of(23,43,34,45,36,48).stream().filter(new OddNumberPredicate()).forEach(new ForEachConsumer());
+        List.of(23,43,34,45,36,48).stream().filter(new OddNumberPredicate()).forEach(new SystemOutConsumer());
 
     }
 
