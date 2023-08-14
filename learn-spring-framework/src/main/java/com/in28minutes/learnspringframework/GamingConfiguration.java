@@ -14,7 +14,7 @@ public class GamingConfiguration {
     
     @Bean
     public GamingConsole game() {
-        var game = new SuperContraGame();
+        var game = new MarioGame();
         return game;
     }
     
