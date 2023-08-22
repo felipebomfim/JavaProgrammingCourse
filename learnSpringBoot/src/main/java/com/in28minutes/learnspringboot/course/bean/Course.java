@@ -1,11 +1,24 @@
 package com.in28minutes.learnspringboot.course.bean;
 
-public class Course {
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
-	private int id;
+@Entity 
+public class Course {
+    
+    @Id
+    @GeneratedValue (strategy = GenerationType.AUTO)
+	private long id;
+    
 	private String name;
 	private String author;
-
+	
+	public Course() {
+	    super();
+	}
+	
 	public Course(int id, String name, String author) {
 		// TODO Auto-generated constructor stub
 		super();
@@ -14,7 +27,7 @@ public class Course {
 		this.author = author;
 	}
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
